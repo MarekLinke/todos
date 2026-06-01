@@ -1,0 +1,25 @@
+export default function TodoList(props) {
+    return (
+        <section>
+            <h1>Дела</h1>
+            <table className="table is-hoverable is fullwidth">
+                <tbody>
+                    {props.list.map(item=> (
+                       <tr key={item.key}>
+                            <td>
+                                {item.done && <del>{item.title}</del>}
+                                {item.done && item.title}
+                            </td>
+                            <td>
+                                <buttom className="buttom is-succes" title="Выполнено" disabled={item.done}>&#9745</buttom>
+                            </td>
+                            <td>
+                                <buttom className="button is danger" title="Удалить">&#9746</buttom>
+                            </td>
+                       </tr> 
+                    ))}
+                </tbody>
+            </table>
+        </section>
+    );
+}
