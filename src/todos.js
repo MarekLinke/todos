@@ -18,4 +18,5 @@ const todos = [
         createdAt: date2.toLocaleString(),
         key: date2.getTime()
     }
-]
+];
+export default todos;
